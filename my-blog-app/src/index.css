@@ -1,0 +1,52 @@
+:where(:not(iframe,canvas,img,svg,video):not(svg *)){all:unset;display:revert}*,::after,::before{box-sizing:border-box}ol,ul{list-style:none}img{max-width:100%}table{border-collapse:collapse}textarea{white-space:revert}
+
+/* Navbar */
+
+.navbar {
+    position: fixed;
+    width: 100%;
+    padding: 10px;
+    background-color: rgb(238, 240, 240);
+    
+    .container {
+        padding: 0px;
+        justify-content: center;
+        display: flex;
+        gap: 40px      
+    }
+    
+    h6 {
+        font-size: 16px;
+        font-weight: 500;
+        cursor: pointer;
+        padding: 4px;
+        &:hover{
+            background-color: rgb(195, 228, 236);
+            border-radius: 8px;
+            font-size: larger;   
+        }
+    }
+    .logo {
+        padding-bottom: 10px;
+        float: left;        
+    }
+    .profile {
+        cursor: pointer;
+    }
+
+}
+
+/* Footer */
+.footer{
+    background-color: rgb(238, 240, 240);
+    padding: 8px;
+    display: flex;
+    justify-content: center;
+    
+    .img{
+        height: 20px;
+    }
+}
+.home{
+    
+}
