@@ -2,6 +2,7 @@ import React from "react";
 
 
 
+
 function Login(){
     return(
 
@@ -21,7 +22,7 @@ function Login(){
                 </div>
                 
                 <button className=" px-6 py-2 bg-blue-300  hover:bg-sky-500 rounded-lg font-sans">Sign in</button>
-                <span className="mb-6 font-sans   text-base">Dont have account <a className="text-blue-700 cursor-pointer" href="/register">register</a> here</span>
+                <span className="mb-6 font-sans   text-base">Don't have account ? <a className="text-blue-700 cursor-pointer" href="/register">register</a> here</span>
 
             </div>
         </div>
