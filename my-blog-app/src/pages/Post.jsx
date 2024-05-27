@@ -1,7 +1,19 @@
 import React from "react";
+
+
+
+
+
+
+
+
 function Post(){
     return(
-        <div>Post page works</div>
+        <div className="home">
+             <div>
+                
+             </div>
+        </div>
     )
 }
 export default Post;
