@@ -1,23 +1,28 @@
 import React from "react";
+
+
+
 function Login(){
     return(
-        <div className="home">
-            <div className="flex flex-col gap-4">
-                <div className="flex flex-col">
-                <label >Email</label>
-                <input  type="email" className="border-2 border-gray-500" placeholder="email" />
+
+        <div className="mt-20 max-w-sm mx-auto ">
+          
+            <div className="flex flex-col gap-6 place-items-center bg-white shadow-md border border-gray-200 rounded-lg p-2  ">
+
+                <h4 className="mt-5 text-xl font-sans font-bold ">Sign in to your Account</h4>
+                <div className="flex flex-col mt-6">    
+                <label className="text-lg font-sans  " >Email</label>
+                <input required type="email" className="border-2 border-sky-500 rounded-md  px-8 py-2 " placeholder="email" />
                 </div>
                
                 <div className="flex flex-col">
-                <label htmlFor="">password</label>
-                <input type="text" className="border-2 border-gray-500" placeholder="password" />
+                <label className="text-lg font-sans  " htmlFor="">Password</label>
+                <input required minLength={8} type="text" className="border-2 border-sky-500 rounded-md px-8 py-2" placeholder="password" />
                 </div>
                 
-                <button className=" ">Sign in</button>
-            </div>
-            <div>
-                <h1> dont have account sign in here </h1>
-                <a href="/register">register</a>
+                <button className=" px-6 py-2 bg-blue-300  hover:bg-sky-500 rounded-lg font-sans">Sign in</button>
+                <span className="mb-6 font-sans   text-base">Dont have account <a className="text-blue-700 cursor-pointer" href="/register">register</a> here</span>
+
             </div>
         </div>
     )
