@@ -15,25 +15,25 @@ function Navbar() {
                     </Link>
                 </div>
                 <div>
-                    <Link to={'/Science'}>
+                    <Link to={'/'}>
                         <h6>SCIENCE</h6>
                     </Link>
 
                 </div>
                 <div>
-                    <Link to={'/tech'}>
+                    <Link to={'/#'}>
                         <h6>TECHNOLOGY</h6>
                     </Link>
 
                 </div>
                 <div>
-                    <Link to={'/Art'}>
+                    <Link to={'/#'}>
                         <h6>ART</h6>
                     </Link>
                 </div>
 
                 <div>
-                    <Link to={'/Music'}>
+                    <Link to={'/#'}>
                         <h6>MUSIC</h6>
                     </Link>
                 </div>

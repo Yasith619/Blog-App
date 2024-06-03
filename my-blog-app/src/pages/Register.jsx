@@ -38,7 +38,7 @@ function Register() {
     return (
         <div >
             <div className="mt-10 max-w-sm mx-auto ">
-                <form action="submit">
+                <form onSubmit={submitUserData}>
                     <div className="flex flex-col gap-4 place-items-center bg-white shadow-md border border-gray-200 rounded-lg p-2  ">
 
                         <h4 className="mt-5 text-xl font-sans font-bold ">Register as New User</h4>
@@ -68,7 +68,7 @@ function Register() {
                             />
                         </div>
 
-                        <button onSubmit={submitUserData} className=" px-6 py-2 bg-blue-300  hover:bg-sky-500 rounded-lg font-sans">Register</button>
+                        <button type="submit" className=" px-6 py-2 bg-blue-300  hover:bg-sky-500 rounded-lg font-sans">Register</button>
                         {<p className="text-red-600 text-sm"> {errorMessage} </p>}
                         <span className="mb-6 font-sans   text-base">Already have account ? <a className="text-blue-700 cursor-pointer" href="/login">sign in</a> here</span>
 
