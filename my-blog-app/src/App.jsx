@@ -30,7 +30,7 @@ const router = createBrowserRouter([
         path: '/edit',
         element: <EditPost />
       }, {
-        path: '/singlePost',
+        path: '/singlePost/:post_id',
         element: <Post />
       }
 
@@ -38,11 +38,11 @@ const router = createBrowserRouter([
   },
 
   {
-    path: "/login",
+    path: "/SignIn",
     element: <Login />,
   },
   {
-    path: "/register",
+    path: "/SignUp",
     element: <Register />,
   },
 

@@ -70,7 +70,7 @@ function Register() {
 
                         <button type="submit" className=" px-6 py-2 bg-blue-300  hover:bg-sky-500 rounded-lg font-sans">Register</button>
                         {<p className="text-red-600 text-sm"> {errorMessage} </p>}
-                        <span className="mb-6 font-sans   text-base">Already have account ? <a className="text-blue-700 cursor-pointer" href="/login">sign in</a> here</span>
+                        <span className="mb-6 font-sans   text-base">Already have account ? <a className="text-blue-700 cursor-pointer" href="/SignIn">sign in</a> here</span>
 
                     </div>
                 </form>
