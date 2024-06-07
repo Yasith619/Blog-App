@@ -7,6 +7,7 @@ import Login from './pages/Login'
 import Post from './pages/Post'
 import CreatePost from './pages/CreatePost'
 import EditPost from './pages/EditPost'
+import UserProfile from "./components/Profile";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import './App.css'
@@ -32,6 +33,9 @@ const router = createBrowserRouter([
       }, {
         path: '/singlePost/:post_id',
         element: <Post />
+      },{
+        path:'/profile/:id',
+        element:<UserProfile/>
       }
 
     ]

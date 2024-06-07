@@ -6,8 +6,8 @@ import axios from "axios";
 export const AuthContex = createContext();
 
 export const AuthContexProvider = ({ children }) => {
-    //JSON.parse will convert json string to json object
 
+    //JSON.parse will convert json string to json object
     const [currentUser, setCurrentUser] = useState(JSON.parse(localStorage.getItem("user")|| null))
 
 

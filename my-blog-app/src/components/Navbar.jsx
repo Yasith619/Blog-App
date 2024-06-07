@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link} from "react-router-dom";
 import { IoCreateOutline } from "react-icons/io5";
 import { IoIosLogOut } from "react-icons/io";
 import { AuthContex } from "../Contex/authContex";
@@ -8,8 +8,6 @@ import { AuthContex } from "../Contex/authContex";
 function Navbar() {
     
 const {currentUser,SignOut}=useContext(AuthContex)
-const navigate=useNavigate()
-
 
 
     return (
@@ -53,11 +51,12 @@ const navigate=useNavigate()
                 </div>
 
                 <div className="profile">
-                    <h6>{currentUser?.username}</h6>
+                    {currentUser ? (<Link to={`/profile/${currentUser.id}`}><h6>{currentUser?.username}</h6></Link>):(
+                        <h6>Profile</h6>
+                    )}
                 </div>
 
                 <div className="profile">
-                    
                     {currentUser ? (<button onClick={SignOut}> <IoIosLogOut />Sign Out</button>):(
                      <Link to={'/SignIn'}>Sign in</Link>
                     )}                   
