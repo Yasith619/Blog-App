@@ -27,7 +27,7 @@ function Register() {
         axios.post('http://localhost:3000/Api/user/register', ueserInputs)
             .then((res) => {
                 console.log(res.data)
-                navigate('/login')
+                navigate('/SignIn')
 
             }).catch((err) => {
                 console.log(err.response.data)

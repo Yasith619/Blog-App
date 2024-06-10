@@ -27,7 +27,7 @@ function Home() {
                 {
                     posts.length > 0 ? posts.map((post) => (
                         
-                        <div className="max-w-lg mx-auto">
+                        <div className="max-w-lg mx-auto" key={post.post_id}>
 
                         <div className="bg-white shadow-md border border-gray-200  max-w-sm mb-5">
                             < Link to={`/singlePost/${post.post_id}`}>

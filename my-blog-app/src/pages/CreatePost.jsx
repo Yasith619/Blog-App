@@ -1,24 +1,29 @@
 import axios from "axios";
-import React from "react";
 import { useState } from "react";
+import { useContext } from "react";
+import { AuthContex } from "../Contex/authContex";
 
 
 
 function CreatePost() {
 
+    const {currentUser}=useContext(AuthContex)
+
     const[title,setTitle]=useState("")
     const[description,setDescription]=useState("")
     const[img,setImg]=useState("")
     const[date,setDate]=useState("")
+    const user_id=currentUser.id
 
-    // const data = {title,description,img,date}
-    // console.log(data)
+
+    const data = {title,description,img,date,user_id}
+    console.log(data)
     
     function Post(e) {
         e.preventDefault();
-        const data = {title,description,img,date}
+        const data = {title,description,img,date,user_id}
 
-        axios.post('', data)
+        axios.post('http://localhost:3000/Api/Blog/create', data)
             .then((res) => {
                 console.log(res)
             }).catch((err) => {
@@ -39,7 +44,7 @@ function CreatePost() {
                     </div>
                     <div>
                         <label className="text-sm text-gray-700 block  font-medium">DESCRIPTION</label>
-                        <input  type="text" id="description" className="bg-gray-100 border border-gray-200 rounded py-1 px-3 block
+                        <textarea rows="30" type="text" id="description" className="bg-gray-100 border border-gray-200 rounded py-1 px-3 block
                              focus:ring-blue-500 focus:border-blue-500 text-gray-700 w-full  " 
                              onChange={(e)=>{setDescription(e.target.value)}}/>
                     </div>

@@ -45,9 +45,12 @@ const {currentUser,SignOut}=useContext(AuthContex)
                     </Link>
                 </div>
                 <div>
-                    <Link to={'/create'}>
-                        <h6><IoCreateOutline /> Write</h6>
-                    </Link>
+
+                    { currentUser ?( <Link to={'/create'}> <h6><IoCreateOutline /> Write</h6></Link>):(
+                        <Link to={'/SignIn'}><h6><IoCreateOutline /> Write</h6></Link>
+                    )
+                   
+                    }
                 </div>
 
                 <div className="profile">
