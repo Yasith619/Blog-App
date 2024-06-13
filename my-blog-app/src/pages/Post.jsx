@@ -63,7 +63,8 @@ function Post() {
                                         </div>)
                                     }
                                     <div>
-                                        <p>{post.username}</p>
+                                       
+                                        <Link to={`/profile/${post.id}`}> <p>{post.username}</p> </Link>
                                     </div>
 
                                     <div className="prose max-w-none">
@@ -81,7 +82,7 @@ function Post() {
                 )) : ((
                     <div>No post</div>
                 ))
-            ) : (navigate('/SignIn'))
+            ) :  navigate('/SignIn')
 
             }
 

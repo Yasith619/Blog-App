@@ -1,7 +1,5 @@
 import React, { useContext } from "react";
 import { Link} from "react-router-dom";
-import { IoCreateOutline } from "react-icons/io5";
-import { IoIosLogOut } from "react-icons/io";
 import { AuthContex } from "../Contex/authContex";
 
 
@@ -46,23 +44,34 @@ const {currentUser,SignOut}=useContext(AuthContex)
                 </div>
                 <div>
 
-                    { currentUser ?( <Link to={'/create'}> <h6><IoCreateOutline /> Write</h6></Link>):(
-                        <Link to={'/SignIn'}><h6><IoCreateOutline /> Write</h6></Link>
+                    { currentUser ?( 
+                        <Link to={'/create'}> <h6> Write</h6></Link>):(
+                        <Link to={'/SignIn'}><h6> Write</h6></Link>
                     )
                    
                     }
                 </div>
 
-                <div className="profile">
-                    {currentUser ? (<Link to={`/profile/${currentUser.id}`}><h6>{currentUser?.username}</h6></Link>):(
-                        <h6>Profile</h6>
-                    )}
-                </div>
+    
 
                 <div className="profile">
-                    {currentUser ? (<button onClick={SignOut}> <IoIosLogOut />Sign Out</button>):(
-                     <Link to={'/SignIn'}>Sign in</Link>
+                    {currentUser ? (<button onClick={SignOut}><h6>Sign Out</h6></button>):(
+                     <Link to={'/SignIn'}> <h6>Sign in</h6></Link>
                     )}                   
+                </div>
+                <div >
+                    {
+                        currentUser ?(
+                            currentUser.user_img?(
+                            <Link to={`/profile/${currentUser.id}`}>
+                                <img className="w-9 h-9 rounded-full mx-auto cursor-pointer" src={currentUser.user_img} />
+                             </Link>):(
+                                 <img className="w-9 h-9 rounded-full mx-auto" src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_640.png" alt="USER" />
+                             )
+                         ):(
+                           <div></div>
+                        )
+                    }
                 </div>
             </div>
         </div>
