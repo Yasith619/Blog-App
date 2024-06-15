@@ -5,7 +5,7 @@ import axios from "axios";
 import { AuthContex } from "../Contex/authContex";
 import { MdDelete } from "react-icons/md";
 import { MdEdit } from "react-icons/md";
-
+import parse from 'html-react-parser';
 
 
 
@@ -68,7 +68,7 @@ function Post() {
                                     </div>
 
                                     <div className="prose max-w-none">
-                                        <p>{post.description}</p>
+                                       {parse(post.description)}
                                     </div>
 
                                 </div>
